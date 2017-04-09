@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../../services/firebase.service';
+import { Observable } from "rxjs/Observable";
 
 @Component({
   selector: 'app-listings',
@@ -8,7 +9,7 @@ import { FirebaseService } from '../../services/firebase.service';
 })
 export class ListingsComponent implements OnInit {
 
-  listings:any;
+  listings: any;
 
   constructor(
     private fbService: FirebaseService
