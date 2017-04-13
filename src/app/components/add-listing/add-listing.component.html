@@ -1,3 +1,37 @@
-<p>
-  add-listing works!
-</p>
+<a [routerLink]="['/listings']">Back</a>
+<br>
+<h2 class="page-header">Add listing</h2>
+<form (submit)="onAddSubmit()">
+  <div class="from-group">
+    <label>Title</label>
+    <input type="text" class="form-control" [(ngModel)]="title" name="title">
+  </div>
+  <div class="from-group">
+    <label>City</label>
+    <input type="text" class="form-control" [(ngModel)]="city" name="city">
+  </div>
+  <div class="from-group">
+    <label>Owner</label>
+    <input type="text" class="form-control" [(ngModel)]="owner" name="owner">
+  </div>
+  <div class="from-group">
+    <label>Bedrooms</label>
+    <input type="number" class="form-control" [(ngModel)]="bedrooms" name="bedrooms">
+  </div>
+  <div class="form-group">
+    <label>Type</label>
+    <select name="type" class="form-control" [(ngModel)]="type">
+      <option value="Estate">Estate</option>
+      <option value="Condo">Condo</option>
+      <option value="Apartment">Apartment</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <input id="image" name="image" type="file" [(ngModel)]="image">
+  </div>
+  <div class="form-group">
+    <label>Price</label>
+    <input type="text" class="form-control" name="price" [(ngModel)]="price">
+  </div>
+  <input type="submit" value="submit" class="btn btn-success">
+</form>

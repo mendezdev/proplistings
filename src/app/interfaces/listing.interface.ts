@@ -3,6 +3,7 @@ export interface Listing{
     title?:string;
     type?:string;
     image?:string;
+    path?:string;
     city?:string;
     owner?:string;
     bedromms?:string;
